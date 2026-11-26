@@ -1,0 +1,138 @@
+.pos-search-tools {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(150px, .7fr);
+  gap: 8px;
+  width: min(440px, 100%);
+}
+
+.pos-search-tools .form-control {
+  min-width: 0;
+}
+
+.pos-change-preview {
+  margin-top: 7px;
+  color: #8290a4;
+  font-size: 10px;
+  text-align: right;
+}
+
+.pos-change-preview b {
+  color: #dce7f6;
+}
+
+#posCashField[hidden] {
+  display: none;
+}
+
+#productModal .modal-wide {
+  width: min(920px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+}
+
+#productModal .variant-edit-list {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+#productModal .variant-edit-header,
+#productModal .variant-edit-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 1.2fr) minmax(80px, .55fr) minmax(105px, .7fr) minmax(200px, 1.35fr) 28px;
+  gap: 9px;
+  align-items: center;
+}
+
+#productModal .variant-edit-row > input[type="hidden"] {
+  display: none;
+}
+
+#productModal .variant-edit-header span {
+  min-width: 0;
+}
+
+#productModal .variant-edit-row label {
+  min-width: 0;
+}
+
+#productModal .variant-edit-row label > span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#productModal .variant-edit-row .form-control {
+  min-width: 0;
+}
+
+#productModal .variant-edit-row [data-variant-barcode] {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  .pos-search-tools {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .pos-search-tools {
+    grid-template-columns: 1fr;
+  }
+
+  #productModal .modal-wide {
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+  }
+
+  #productModal .variant-edit-header {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(70px, .55fr) minmax(75px, .6fr) minmax(150px, 1.2fr);
+  }
+
+  #productModal .variant-edit-row {
+    grid-template-columns: minmax(100px, 1fr) minmax(70px, .55fr) minmax(75px, .6fr) minmax(150px, 1.2fr);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(160, 181, 218, .1);
+  }
+
+  #productModal .variant-edit-row label:nth-of-type(1) {
+    grid-column: auto;
+  }
+
+  #productModal .variant-edit-row label:nth-of-type(2) {
+    grid-column: auto;
+  }
+
+  #productModal .variant-edit-row label:nth-of-type(3) {
+    grid-column: auto;
+  }
+
+  #productModal .variant-edit-row label:nth-of-type(4) {
+    grid-column: auto;
+  }
+
+  #productModal .variant-edit-row .switch-label {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  #productModal .variant-edit-row [data-remove-variant] {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  #productModal .variant-edit-header {
+    display: none;
+  }
+
+  #productModal .variant-edit-row {
+    grid-template-columns: minmax(0, 1fr) minmax(80px, .65fr);
+  }
+
+  #productModal .variant-edit-row label:nth-of-type(1),
+  #productModal .variant-edit-row label:nth-of-type(4) {
+    grid-column: 1 / -1;
+  }
+}
